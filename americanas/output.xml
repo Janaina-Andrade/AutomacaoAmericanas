@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.11.1 on win32)" generated="20230217 20:39:00.607" rpa="false" schemaversion="3">
+<suite id="s1" name="PesquisaTeste" source="C:\Users\janal\americanas\PesquisaTeste.robot">
+<test id="s1-t1" name="Caso de Teste 01: Pesquisar produto" line="6">
+<kw name="Acessar a página da Americanas" library="PesquisaResource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230217 20:39:00.952" level="INFO">Opening browser 'chrome' to base url 'https://www.americanas.com.br/'.</msg>
+<status status="PASS" starttime="20230217 20:39:00.951" endtime="20230217 20:39:09.511"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Americanas - tudo, a toda hora, em qualquer lugar :)</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230217 20:39:09.673" level="INFO">Page title is 'Americanas - tudo, a toda hora, em qualquer lugar :)'.</msg>
+<status status="PASS" starttime="20230217 20:39:09.511" endtime="20230217 20:39:09.673"/>
+</kw>
+<status status="PASS" starttime="20230217 20:39:00.950" endtime="20230217 20:39:09.673"/>
+</kw>
+<kw name="Pesquisar por &quot;Celular Xiaomi&quot;" library="PesquisaResource" sourcename="Pesquisar por &quot;${TEXTO_PEQUISA}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_PESQUISAR}</arg>
+<arg>${TEXTO_PEQUISA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230217 20:39:09.683" level="INFO">Typing text 'Celular Xiaomi' into text field 'name=conteudo'.</msg>
+<status status="PASS" starttime="20230217 20:39:09.681" endtime="20230217 20:39:11.308"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${BTN_PESQUISAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230217 20:39:11.309" level="INFO">Clicking button 'css=#rsyswpsdk &gt; div &gt; header &gt; div.src__Inner-sc-q7wx4i-2.kXfNUu &gt; div.src__Container-sc-q7wx4i-3.fVZPdo &gt; div &gt; div.search__Container-sc-1wvs0c1-0.fpjaUO &gt; form &gt; button'.</msg>
+<status status="PASS" starttime="20230217 20:39:11.308" endtime="20230217 20:39:14.377"/>
+</kw>
+<status status="PASS" starttime="20230217 20:39:09.680" endtime="20230217 20:39:14.378"/>
+</kw>
+<kw name="Conferir mensagem de pesquisa por &quot;Celulares e Smartphones&quot;" library="PesquisaResource" sourcename="Conferir mensagem de pesquisa por &quot;${MSG_ENCONTRADA}&quot;">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${MSG_ENCONTRADA}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230217 20:39:14.431" level="INFO">Current page contains text 'Celulares e Smartphones'.</msg>
+<status status="PASS" starttime="20230217 20:39:14.379" endtime="20230217 20:39:14.432"/>
+</kw>
+<status status="PASS" starttime="20230217 20:39:14.379" endtime="20230217 20:39:14.432"/>
+</kw>
+<status status="PASS" starttime="20230217 20:39:00.948" endtime="20230217 20:39:14.432"/>
+</test>
+<test id="s1-t2" name="Caso de Teste 02: Pesquisa por produto inexistente" line="11">
+<kw name="Acessar a página da Americanas" library="PesquisaResource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230217 20:39:14.439" level="INFO">Opening browser 'chrome' to base url 'https://www.americanas.com.br/'.</msg>
+<status status="PASS" starttime="20230217 20:39:14.438" endtime="20230217 20:39:27.091"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Americanas - tudo, a toda hora, em qualquer lugar :)</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230217 20:39:27.243" level="INFO">Page title is 'Americanas - tudo, a toda hora, em qualquer lugar :)'.</msg>
+<status status="PASS" starttime="20230217 20:39:27.091" endtime="20230217 20:39:27.244"/>
+</kw>
+<status status="PASS" starttime="20230217 20:39:14.437" endtime="20230217 20:39:27.244"/>
+</kw>
+<kw name="Pesquisar por &quot;XPTO551&quot;" library="PesquisaResource" sourcename="Pesquisar por &quot;${TEXTO_PEQUISA}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_PESQUISAR}</arg>
+<arg>${TEXTO_PEQUISA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230217 20:39:27.247" level="INFO">Typing text 'XPTO551' into text field 'name=conteudo'.</msg>
+<status status="PASS" starttime="20230217 20:39:27.246" endtime="20230217 20:39:28.497"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${BTN_PESQUISAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230217 20:39:28.499" level="INFO">Clicking button 'css=#rsyswpsdk &gt; div &gt; header &gt; div.src__Inner-sc-q7wx4i-2.kXfNUu &gt; div.src__Container-sc-q7wx4i-3.fVZPdo &gt; div &gt; div.search__Container-sc-1wvs0c1-0.fpjaUO &gt; form &gt; button'.</msg>
+<status status="PASS" starttime="20230217 20:39:28.497" endtime="20230217 20:39:32.268"/>
+</kw>
+<status status="PASS" starttime="20230217 20:39:27.245" endtime="20230217 20:39:32.268"/>
+</kw>
+<kw name="Conferir mensagem de pesquisa por &quot;poxa, nenhum resultado encontrado&quot;" library="PesquisaResource" sourcename="Conferir mensagem de pesquisa por &quot;${MSG_ENCONTRADA}&quot;">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${MSG_ENCONTRADA}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230217 20:39:33.124" level="INFO">Current page contains text 'poxa, nenhum resultado encontrado'.</msg>
+<status status="PASS" starttime="20230217 20:39:32.271" endtime="20230217 20:39:33.124"/>
+</kw>
+<status status="PASS" starttime="20230217 20:39:32.270" endtime="20230217 20:39:33.124"/>
+</kw>
+<status status="PASS" starttime="20230217 20:39:14.435" endtime="20230217 20:39:33.125"/>
+</test>
+<test id="s1-t3" name="Caso de Teste 03: Pesquisa por produto com nome errado" line="16">
+<kw name="Acessar a página da Americanas" library="PesquisaResource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230217 20:39:33.134" level="INFO">Opening browser 'chrome' to base url 'https://www.americanas.com.br/'.</msg>
+<status status="PASS" starttime="20230217 20:39:33.132" endtime="20230217 20:39:47.373"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Americanas - tudo, a toda hora, em qualquer lugar :)</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230217 20:39:47.692" level="INFO">Page title is 'Americanas - tudo, a toda hora, em qualquer lugar :)'.</msg>
+<status status="PASS" starttime="20230217 20:39:47.373" endtime="20230217 20:39:47.692"/>
+</kw>
+<status status="PASS" starttime="20230217 20:39:33.130" endtime="20230217 20:39:47.692"/>
+</kw>
+<kw name="Pesquisar por &quot;Selular Xiaomi&quot;" library="PesquisaResource" sourcename="Pesquisar por &quot;${TEXTO_PEQUISA}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_PESQUISAR}</arg>
+<arg>${TEXTO_PEQUISA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230217 20:39:47.713" level="INFO">Typing text 'Selular Xiaomi' into text field 'name=conteudo'.</msg>
+<status status="PASS" starttime="20230217 20:39:47.712" endtime="20230217 20:39:49.021"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${BTN_PESQUISAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230217 20:39:49.022" level="INFO">Clicking button 'css=#rsyswpsdk &gt; div &gt; header &gt; div.src__Inner-sc-q7wx4i-2.kXfNUu &gt; div.src__Container-sc-q7wx4i-3.fVZPdo &gt; div &gt; div.search__Container-sc-1wvs0c1-0.fpjaUO &gt; form &gt; button'.</msg>
+<status status="PASS" starttime="20230217 20:39:49.021" endtime="20230217 20:39:52.763"/>
+</kw>
+<status status="PASS" starttime="20230217 20:39:47.711" endtime="20230217 20:39:52.763"/>
+</kw>
+<kw name="Conferir mensagem de pesquisa por &quot;buscas relacionadas&quot;" library="PesquisaResource" sourcename="Conferir mensagem de pesquisa por &quot;${MSG_ENCONTRADA}&quot;">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${MSG_ENCONTRADA}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230217 20:39:54.698" level="INFO">Current page contains text 'buscas relacionadas'.</msg>
+<status status="PASS" starttime="20230217 20:39:52.767" endtime="20230217 20:39:54.698"/>
+</kw>
+<status status="PASS" starttime="20230217 20:39:52.766" endtime="20230217 20:39:54.698"/>
+</kw>
+<status status="PASS" starttime="20230217 20:39:33.129" endtime="20230217 20:39:54.705"/>
+</test>
+<status status="PASS" starttime="20230217 20:39:00.610" endtime="20230217 20:39:54.709"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="PesquisaTeste">PesquisaTeste</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
